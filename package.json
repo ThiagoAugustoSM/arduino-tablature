@@ -26,6 +26,11 @@
     "guitar"
   ],
   "author": "thiagoaugustosm",
+  "contributors": [{
+    "name": "Otacilio Maia",
+    "email": "contato@otaciliomaia.com",
+    "url" : "http://otaciliomaia.com/"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ThiagoAugustoSM/arduino-tablature/issues"
