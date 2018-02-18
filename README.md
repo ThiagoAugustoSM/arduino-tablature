@@ -33,3 +33,7 @@ Save the file and execute in the terminal:
 #### 3. Uploading
 
 After that a **music.ino** file will be generated and you will be able to upload it to your arduino using the Arduino IDE or others.
+
+## License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
