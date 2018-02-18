@@ -50,7 +50,7 @@ request(url, function(error, response, html){
   }
 })
 
-var typesOfPause = ['-'];
+var typesOfPause = ['-', 'h', '/', 'p'];
 var typesOfNotes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 var typesOfBlockLimits = ['|'];
 var notes = [
