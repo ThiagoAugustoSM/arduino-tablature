@@ -22,17 +22,13 @@ Example:
 
 > https://www.cifraclub.com.br/natiruts/andei-so/
 
-After, paste your link into the **index.js** file on the line 14.
+Then execute in the terminal, with your url in the url param:
 
-> url = 'https://www.cifraclub.com.br/natiruts/andei-so/';
-
-Save the file and execute in the terminal:
-
-> node index
+> node index.js --url=https://www.cifraclub.com.br/natiruts/andei-so/
 
 #### 3. Uploading
 
-After that a **music.ino** file will be generated and you will be able to upload it to your arduino using the Arduino IDE or others.
+After that a **music.ino** file will be generated, inside the music folder, and you will be able to upload it to your arduino using the Arduino IDE or others.
 
 ## License
 
