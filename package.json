@@ -1,0 +1,30 @@
+{
+  "name": "arduino-tablature",
+  "version": "1.0.0",
+  "description": "A web script to get a guitar tablature and make it into Arduino Tone Function form.",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "fs": "0.0.1-security",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoAugustoSM/arduino-tablature.git"
+  },
+  "keywords": [
+    "arduino",
+    "tablature",
+    "guitar"
+  ],
+  "author": "thiagoaugustosm",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ThiagoAugustoSM/arduino-tablature/issues"
+  },
+  "homepage": "https://github.com/ThiagoAugustoSM/arduino-tablature#readme"
+}
