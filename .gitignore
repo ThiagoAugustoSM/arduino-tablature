@@ -10,4 +10,4 @@ yarn-error.log*
 node_modules
 
 ### Ignoring Music ###
-music/
+music/music.ino
