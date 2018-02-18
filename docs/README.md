@@ -52,6 +52,14 @@ Then execute in the terminal, with your url in the url param:
 
 After that a **music.ino** file will be generated, inside the music folder, and you will be able to [upload it to your arduino](https://www.arduino.cc/en/Guide/HomePage) using the Arduino IDE or others.
 
+## Broken Musics and Bugs
+
+Some music is not working? We have a [thread issue](https://github.com/ThiagoAugustoSM/arduino-tablature/issues/5) open to report bugs in specific musics, report in the issue following the report example, and soon as possible the community will fix it.
+
+Some bug? You can also open your own issue to report a bug. 
+
+_tip: It is a good idea, when you find a bug, open a issue to report it, and make a pull request with the solution, becomin a contributor of the project_
+
 ## Contributors
 **Thiago Augusto** ([GitHub :octocat:](https://github.com/ThiagoAugustoSM))
 <br>
