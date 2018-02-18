@@ -61,12 +61,12 @@ Some bug? You can also open your own issue to report a bug.
 _tip: It is a good idea, when you find a bug, open a issue to report it, and make a pull request with the solution, becomin a contributor of the project_
 
 ## Contributors
-**Thiago Augusto** ([GitHub :octocat:](https://github.com/ThiagoAugustoSM))
+**Thiago Augusto** ([GitHub](https://github.com/ThiagoAugustoSM))
 <br>
 ![](https://github.com/ThiagoAugustoSM.png?size=230)<br>
 **Idealization and coding**
 
-**Otacilio Maia** ([GitHub :octocat:](https://github.com/OtacilioN))
+**Otacilio Maia** ([GitHub](https://github.com/OtacilioN))
 <br>
 ![](https://github.com/OtacilioN.png?size=230)<br>
 **Documentation and coding**
@@ -78,6 +78,10 @@ _tip: It is a good idea, when you find a bug, open a issue to report it, and mak
 ![](https://i.imgur.com/G1mfFQT.png)
 
 Become a contributor, fork this repository, make your modifications and submit a pull request. See the complete list of [contributors](https://github.com/ThiagoAugustoSM/arduino-tablature/graphs/contributors).
+
+## Disclaimer
+
+The authors of this project have no association with the Cifras Club. Cifras Club is a registered trademark
 
 ## License
 
