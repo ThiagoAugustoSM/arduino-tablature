@@ -8,6 +8,7 @@
     "express": "^4.16.2",
     "fs": "0.0.1-security",
     "pug": "^2.0.0-rc.4",
+    "request": "^2.83.0",
     "require": "^2.4.20"
   },
   "devDependencies": {},
