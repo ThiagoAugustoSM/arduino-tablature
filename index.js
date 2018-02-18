@@ -10,8 +10,17 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const args = require('yargs').argv;
 
-url = 'https://www.cifraclub.com.br/natiruts/andei-so/';
+if(args.url != undefined){
+  url = args.url;
+  console.log('requesting from:' + args.url)
+}
+else{
+  url = 'https://www.cifraclub.com.br/natiruts/andei-so/'
+  console.log('no arguments detected')
+}
+
 var tabInNotes = [];
 
 
@@ -29,7 +38,7 @@ request(url, function(error, response, html){
     var arduinoFile = generateFile(tabInNotes);
 
     // Saving file in the same directory
-    fs.writeFile('music.ino', arduinoFile, function (err) {
+    fs.writeFile('music/music.ino', arduinoFile, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
