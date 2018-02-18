@@ -11,6 +11,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const args = require('yargs').argv;
+
 var url;
 
 if(args.url != undefined){
