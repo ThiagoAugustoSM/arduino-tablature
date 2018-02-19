@@ -11,8 +11,8 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const args = require('yargs').argv;
-const makeFile = require('./makeFile.js');
-const tablature = require('./tablature.js');
+const makeFile = require('./src/baseFile.js');
+const tablature = require('./src/tablature.js');
 
 var url;
 
