@@ -24,13 +24,26 @@ else{
 }
 
 var tabInNotes = [];
-
+var capo = 0;
 
 // Request to get the html from cifraclub's website
 request(url, function(error, response, html){
 
   if(!error){
     var $ = cheerio.load(html);
+
+    // In the webpage the capo text is like:
+    // 2ª casa
+    capo = $("#cifra_capo").children().contents().text();
+    if(capo.length > 0){
+      capo = parseInt(capo.split('ª')[0]);
+    }else{
+      capo = 0;
+    }
+    console.log("Capo value", capo);
+    // $("#cifra_capo").each(function(){
+    //   console.log($(this).text());
+    // });
 
     $(".tablatura").each(function(){
       var tab = $(this).text();
@@ -162,6 +175,8 @@ function filterTab(tab){
       }else if(char == 'E'){
         actualMainNote = "NOTE_E2";
       }
+      // If there is capo it will increase the tuning
+      actualMainNote = toNote(actualMainNote, capo);
 
       tabInForm.push([])
       state = 1;
