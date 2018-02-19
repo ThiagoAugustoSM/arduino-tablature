@@ -15,6 +15,8 @@ const makeFile = require('./src/baseFile.js');
 const tablature = require('./src/tablature.js');
 
 var url;
+var tabInNotes = [];
+var rhythmArray = [];
 
 if(args.url != undefined){
   url = args.url;
@@ -55,5 +57,3 @@ if(args.url != undefined){
 else{
   console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/')
 }
-
-var tabInNotes = [];
