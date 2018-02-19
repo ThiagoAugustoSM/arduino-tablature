@@ -1,6 +1,6 @@
 {
   "name": "arduino-tablature",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.0",
   "description": "A web script to get a guitar tablature and make it into Arduino Tone Function form.",
   "main": "index.js",
   "dependencies": {
