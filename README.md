@@ -21,19 +21,44 @@ So, with a circuit like that:
 
 Using this project you can play your favorite songs in your own Arduino.
 
-## How to use it
+## How to use it (Recommended way)
 
-### 1. Installation
+First of all, make sure you have [npm and node](https://www.npmjs.com/get-npm) installed.
 
-1. First of all, make sure you have [npm and node](https://www.npmjs.com/get-npm) installed.
-2. Then [clone/download](https://github.com/ThiagoAugustoSM/arduino-tablature/zipball/master) this repository. _if you download a .zip or .tar.gz file, unzip the file._ 
-3. In the terminal navigate to the folder, then run:
+### Installation
+Open your terminal and type:
+
+> sudo npm install -g arduino-tablature
+
+Now you have the arduino-tablature command available globally
+
+### Picking your tablature
+
+- Go to [CifraClub's WebSite](https://www.cifraclub.com.br "CifraClub's Website") and search for your song, **which has a tablature on it.**
+
+#### Example:
+
+> https://www.cifraclub.com.br/natiruts/andei-so/
+
+### Running the code
+Then execute in the terminal, with your url in the url param:
+
+> arduino-tablature --url=https://www.cifraclub.com.br/natiruts/andei-so/
+
+### Uploading to Arduino
+
+After that a **music.ino** file will be generated, inside the music folder, and you will be able to [upload it to your arduino](https://www.arduino.cc/en/Guide/HomePage) using the Arduino IDE or others.
+
+### Alternative way
+
+#### Installation
+
+1. start [cloning/downloading](https://github.com/ThiagoAugustoSM/arduino-tablature/zipball/master) this repository. _if you download a .zip or .tar.gz file, unzip the file._
+2. In the terminal navigate to the folder, then run:
 
 > npm install
 
 After it all the dependencies packages are all set.
-
-### 2. Running the Code
 
 #### Picking your tablature
 
@@ -48,7 +73,7 @@ Then execute in the terminal, with your url in the url param:
 
 > node index.js --url=https://www.cifraclub.com.br/natiruts/andei-so/
 
-### 3. Uploading
+#### Uploading to Arduino
 
 After that a **music.ino** file will be generated, inside the music folder, and you will be able to [upload it to your arduino](https://www.arduino.cc/en/Guide/HomePage) using the Arduino IDE or others.
 
@@ -57,9 +82,9 @@ After that a **music.ino** file will be generated, inside the music folder, and 
 
 Some music is not working? We have a [thread issue](https://github.com/ThiagoAugustoSM/arduino-tablature/issues/5) open to report bugs in specific musics, report in the issue following the report example, and soon as possible the community will fix it.
 
-Some bug? You can also open your own issue to report a bug. 
+Some bug? You can also open your own issue to report a bug.
 
-_tip: It is a good idea, when you find a bug, open a issue to report it, and make a pull request with the solution, becomin a contributor of the project_
+_tip: It is a good idea, when you find a bug, open a issue to report it, and make a pull request with the solution, becoming a contributor of the project_
 
 ## Contributors
 **Thiago Augusto** ([GitHub :octocat:](https://github.com/ThiagoAugustoSM))
