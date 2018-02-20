@@ -21,33 +21,31 @@ So, with a circuit like that:
 
 Using this project you can play your favorite songs in your own Arduino.
 
-## How to use it
+## How to use it (Recommended way)
 
 First of all, make sure you have [npm and node](https://www.npmjs.com/get-npm) installed.
 
-### Recommended way
-
-#### Installation
+### Installation
 Open your terminal and type:
 
 > sudo npm install -g arduino-tablature
 
 Now you have the arduino-tablature command available globally
 
-#### Picking your tablature
+### Picking your tablature
 
 - Go to [CifraClub's WebSite](https://www.cifraclub.com.br "CifraClub's Website") and search for your song, **which has a tablature on it.**
 
-##### Example:
+#### Example:
 
 > https://www.cifraclub.com.br/natiruts/andei-so/
 
-#### Running the code
+### Running the code
 Then execute in the terminal, with your url in the url param:
 
 > arduino-tablature --url=https://www.cifraclub.com.br/natiruts/andei-so/
 
-#### Uploading to Arduino
+### Uploading to Arduino
 
 After that a **music.ino** file will be generated, inside the music folder, and you will be able to [upload it to your arduino](https://www.arduino.cc/en/Guide/HomePage) using the Arduino IDE or others.
 
