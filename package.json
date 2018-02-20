@@ -1,12 +1,16 @@
 {
   "name": "arduino-tablature",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.1-rc.0",
   "description": "A web script to get a guitar tablature and make it into Arduino Tone Function form.",
   "main": "index.js",
+  "bin": {
+    "arduino-tablature": "./index.js"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "fs": "0.0.1-security",
+    "mkdirp": "^0.5.1",
     "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "require": "^2.4.20",
@@ -26,11 +30,13 @@
     "guitar"
   ],
   "author": "thiagoaugustosm",
-  "contributors": [{
-    "name": "Otacilio Maia",
-    "email": "contato@otaciliomaia.com",
-    "url" : "http://otaciliomaia.com/"
-  }],
+  "contributors": [
+    {
+      "name": "Otacilio Maia",
+      "email": "contato@otaciliomaia.com",
+      "url": "http://otaciliomaia.com/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ThiagoAugustoSM/arduino-tablature/issues"

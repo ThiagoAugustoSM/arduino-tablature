@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
   This program makes a web scraping to get some guitar tablature and transform
   it to an Arduino Program compatible with the tone() Function
@@ -13,6 +14,12 @@ const fs = require('fs');
 const args = require('yargs').argv;
 const makeFile = require('./src/baseFile.js');
 const tablature = require('./src/tablature.js');
+var mkdirp = require('mkdirp');
+
+mkdirp('music', function (err) {
+    if (err) console.error(err)
+    else console.log('dir music created with success')
+});
 
 var url;
 
@@ -21,10 +28,10 @@ if(args.url != undefined){
   console.log('requesting from:' + args.url)
   // Request to get the html from cifraclub's website
   request(url, function(error, response, html){
-  
+
     if(!error){
       var $ = cheerio.load(html);
-  
+
       // In the webpage the capo text is like:
       // 2ª casa
       var capo = $("#cifra_capo").children().contents().text();
@@ -33,20 +40,20 @@ if(args.url != undefined){
       }else{
         capo = 0;
       }
-  
+
       $(".tablatura").each(function(){
         var tab = $(this).text();
         tabInNotes.push(tablature.filterTab(tab, capo));
       });
-  
+
       var arduinoFile = makeFile.generateFile(tabInNotes);
-  
+
       // Saving file in the same directory
       fs.writeFile('music/music.ino', arduinoFile, function (err) {
         if (err) throw err;
         console.log('Saved!');
       });
-  
+
     }else{
       console.log("ERROR");
     }
