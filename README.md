@@ -28,9 +28,20 @@ First of all, make sure you have [npm and node](https://www.npmjs.com/get-npm) i
 ### Installation
 Open your terminal and type:
 
-> sudo npm install -g arduino-tablature
+ON LINUX: 
+>sudo npm install -g arduino-tablature
 
-Now you have the arduino-tablature command available globally
+ON WINDOWS:
+>npm install -g arduino-tablature
+
+ON MacOS:
+>sudo npm install -g arduino-tablature
+
+Now you have installed the arduino-tablature command globally.
+That means that you can execute:
+>arduino-tablature
+
+From any directory while in your terminal.
 
 ### Picking your tablature
 
