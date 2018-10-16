@@ -32,7 +32,6 @@ if(args.url != undefined){
 
     if(!error){
 
-      //var tabInNotes = scraper.getTabs(html);
       var song = scraper.getSong(html);
 
       var tabInNotes = song.tabs.map(tab => tablature.filterTab(tab, song.capo));
