@@ -17,15 +17,15 @@ const tablature = require('./src/tablature.js');
 var mkdirp = require('mkdirp');
 
 mkdirp('music', function (err) {
-    if (err) console.error(err)
-    else console.log('dir music created with success')
+    if (err) console.error(err);
+    else console.log('dir music created with success');
 });
 
 var url;
 
 if(args.url != undefined){
   url = args.url;
-  console.log('requesting from:' + args.url)
+  console.log('requesting from:' + args.url);
   // Request to get the html from cifraclub's website
   request(url, function(error, response, html){
 
@@ -57,10 +57,10 @@ if(args.url != undefined){
     }else{
       console.log("ERROR");
     }
-  })
+  });
 }
 else{
-  console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/')
+  console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/');
 }
 
 var tabInNotes = [];
