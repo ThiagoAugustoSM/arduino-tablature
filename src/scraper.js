@@ -22,6 +22,16 @@ class CifraClubSCraper {
   }
 }
 
+class EChordsScraper {
+  getCapo($){
+    return 0;
+  }
+
+  getTabs($){
+    return [$("#core").text().trim()];
+  }
+}
+
 function getScraper(url){
   if(url.includes('e-chords')){
     return new EChordsScraper();
