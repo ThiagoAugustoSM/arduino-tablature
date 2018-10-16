@@ -22,10 +22,17 @@ class CifraClubSCraper {
   }
 }
 
-exports.getSong = function(html){
+function getScraper(url){
+  if(url.includes('e-chords')){
+    return new EChordsScraper();
+  }
+  return new CifraClubSCraper();
+}
+
+exports.getSong = function(url, html){
   var $ = cheerio.load(html);
 
-  var scraper = new CifraClubSCraper();
+  var scraper = getScraper(url);
   var capo = scraper.getCapo($);
   var tabs = scraper.getTabs($);
 
