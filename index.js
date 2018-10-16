@@ -14,6 +14,7 @@ const fs = require('fs');
 const args = require('yargs').argv;
 const makeFile = require('./src/baseFile.js');
 const tablature = require('./src/tablature.js');
+const scraper = require('./src/scraper.js');
 var mkdirp = require('mkdirp');
 
 mkdirp('music', function (err) {
@@ -30,21 +31,8 @@ if(args.url != undefined){
   request(url, function(error, response, html){
 
     if(!error){
-      var $ = cheerio.load(html);
 
-      // In the webpage the capo text is like:
-      // 2ª casa
-      var capo = $("#cifra_capo").children().contents().text();
-      if(capo.length > 0){
-        capo = parseInt(capo.split('ª')[0]);
-      }else{
-        capo = 0;
-      }
-
-      $(".tablatura").each(function(){
-        var tab = $(this).text();
-        tabInNotes.push(tablature.filterTab(tab, capo));
-      });
+      var tabInNotes = scraper.getTabs(html);
 
       var arduinoFile = makeFile.generateFile(tabInNotes);
 
@@ -62,5 +50,3 @@ if(args.url != undefined){
 else{
   console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/');
 }
-
-var tabInNotes = [];
