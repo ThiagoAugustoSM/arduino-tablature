@@ -28,7 +28,9 @@ class EChordsScraper {
   }
 
   getTabs($){
-    return [$("#core").text().trim()];
+    const core = $("#core").text().trim();
+    const regex = /([Ee][:|](?:.*\|\s?\n){5}.*\|)/gm;
+    return core.match(regex);
   }
 }
 
