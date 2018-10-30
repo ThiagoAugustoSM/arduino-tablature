@@ -9,7 +9,6 @@
 */
 
 const request = require('request');
-const cheerio = require('cheerio');
 const fs = require('fs');
 const args = require('yargs').argv;
 const makeFile = require('./src/baseFile.js');
