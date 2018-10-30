@@ -9,42 +9,31 @@
 */
 
 const request = require('request');
-const cheerio = require('cheerio');
 const fs = require('fs');
 const args = require('yargs').argv;
 const makeFile = require('./src/baseFile.js');
 const tablature = require('./src/tablature.js');
+const scraper = require('./src/scraper.js');
 var mkdirp = require('mkdirp');
 
 mkdirp('music', function (err) {
-    if (err) console.error(err)
-    else console.log('dir music created with success')
+    if (err) console.error(err);
+    else console.log('dir music created with success');
 });
 
 var url;
 
 if(args.url != undefined){
   url = args.url;
-  console.log('requesting from:' + args.url)
+  console.log('requesting from:' + args.url);
   // Request to get the html from cifraclub's website
   request(url, function(error, response, html){
 
     if(!error){
-      var $ = cheerio.load(html);
 
-      // In the webpage the capo text is like:
-      // 2ª casa
-      var capo = $("#cifra_capo").children().contents().text();
-      if(capo.length > 0){
-        capo = parseInt(capo.split('ª')[0]);
-      }else{
-        capo = 0;
-      }
+      var song = scraper.getSong(url, html);
 
-      $(".tablatura").each(function(){
-        var tab = $(this).text();
-        tabInNotes.push(tablature.filterTab(tab, capo));
-      });
+      var tabInNotes = song.tabs.map(tab => tablature.filterTab(tab, song.capo));
 
       var arduinoFile = makeFile.generateFile(tabInNotes);
 
@@ -57,10 +46,8 @@ if(args.url != undefined){
     }else{
       console.log("ERROR");
     }
-  })
+  });
 }
 else{
-  console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/')
+  console.log('You must pass a url in a param, example: --url=https://www.cifraclub.com.br/natiruts/andei-so/');
 }
-
-var tabInNotes = [];
